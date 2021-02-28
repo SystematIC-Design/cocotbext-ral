@@ -1,0 +1,46 @@
+{
+    name: example
+    clock_primary: clk_i
+    bus_device: apb
+    regwidth: 32
+    registers: [
+        {
+            name: CONTROL
+            desc: 'Control Register'
+            swaccess: rw
+            hwaccess: hro
+            fields: [
+                {
+                    bits: 0
+                    name: EN
+                    desc: 'Enable'
+                    resval: 0
+                },
+                {
+                    bits: 1
+                    name: IRQ_EN
+                    desc: 'Interrupt Enable'
+                    resval: 0
+                }
+            ]
+        },
+        {
+            name: STATUS
+            desc: 'Status Register'
+            swaccess: ro
+            hwaccess: hwo
+            fields: [
+                {
+                    bits: 0
+                    name: ACTIVE
+                    desc: 'Busy flag'
+                },
+                {
+                    bits: 8
+                    name: IRQ
+                    desc: 'Interrupt Request'
+                }
+            ]
+        }
+    ]
+}

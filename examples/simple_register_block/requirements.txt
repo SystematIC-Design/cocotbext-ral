@@ -1,0 +1,8 @@
+hjson
+mako 
+cocotb
+cocotb_bus
+
+git+https://github.com/tpoikela/uvm-python.git@master#egg=uvm-python
+git+https://github.com/SystematIC-Design/cocotbext-ral.git@main#egg=cocotbext-ral
+git+https://github.com/SystematIC-Design/cocotbext-apb.git@main#egg=cocotbext-apb
